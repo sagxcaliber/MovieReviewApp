@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_BASE = 'http://0.0.0.0:8000';
+const API_BASE = 'http://3.109.49.169:8000';
 
 export const submitReview = async (text) => {
   const res = await axios.post(`${API_BASE}/checkSentiment`, {
