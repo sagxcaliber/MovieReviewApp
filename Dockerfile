@@ -1,6 +1,7 @@
 FROM node:18 AS frontend
 WORKDIR /app/frontend
 COPY sentiment-analyzer/ ./
+COPY sentiment-analyzer/package*.json ./
 
 RUN npm install && npm run build
 
