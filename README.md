@@ -1,44 +1,90 @@
 # MovieReviewApp
-MovieReviewApp
 
-# Docker Installation CMD
-# 1. Update your package index
+A full-stack movie review sentiment analysis application built with React (frontend) and FastAPI (backend). This guide walks you through cloning, setting up, and running the app using Docker.
+
+---
+
+## GitHub Repository
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sagxcaliber/MovieReviewApp
+```
+
+---
+
+## Docker Installation (Amazon Linux)
+
+Follow these steps to install Docker on an Amazon Linux instance:
+
+1. **Update the package index**
+
+```bash
 sudo yum update -y
+```
 
-# 2. Install Docker
+2. **Install Docker**
+
+```bash
 sudo amazon-linux-extras install docker -y
+```
 
-# 3. Start Docker service
+3. **Start Docker service**
+
+```bash
 sudo service docker start
+```
 
-# 4. Add ec2-user to the docker group (optional, so you can run docker without sudo)
+4. **Add current user to Docker group** (optional)
+
+```bash
 sudo usermod -a -G docker ec2-user
+```
 
-# 5. Verify Docker is installed
+5. **Verify Docker installation**
+
+```bash
 docker --version
+```
 
-# ==========================
+---
 
-# Once the Docker is Installed and verified next steps Below:
+## Post-Docker Setup
 
-# 1. give permission to sh files to execute
+Once Docker is installed and running:
+
+1. **Give execute permission to shell scripts**
+
+```bash
 chmod +x dockerCMD.sh
 chmod +x start.sh
+```
 
-# 2. verify that the docker is running
-docker -info
+2. **Verify Docker is running**
 
-# 2.1 if not running for mac use 
-open -a docker
+```bash
+docker info
+```
 
-# 3. once you see it running after that we need to execute the dockerCMD that will build the image:
+> If using macOS and Docker is not running, start it manually:
 
+```bash
+open -a Docker
+```
+
+3. **Build and run the Docker containers**
+
+```bash
 source dockerCMD.sh
+```
 
+---
 
-Notes
-Frontend URL (Local): http://localhost:3000
+## Access URLs
 
-Backend API (Local): http://localhost:8000
+- **Frontend (Local)**: [http://localhost:3000](http://localhost:3000)  
+- **Backend API (Local)**: [http://localhost:8000](http://localhost:8000)  
+- **Public Test URL**: [http://3.109.49.169:3000](http://3.109.49.169:3000)
 
-Public Test URL: http://3.109.49.169:3000/
+---

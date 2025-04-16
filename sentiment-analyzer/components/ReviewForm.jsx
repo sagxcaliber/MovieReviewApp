@@ -24,22 +24,85 @@ const ReviewForm = ({ onResult }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <textarea
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        rows={4}
-        placeholder="Write your review..."
-        className="w-full p-3 border border-gray-400 rounded-md focus:outline-none"
-      />
-      <button
-        type="submit"
-        disabled={!text || loading}
-        className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 disabled:opacity-50"
+    <div
+      style={{
+        maxWidth: '720px',
+        margin: '40px auto',
+        padding: '32px',
+        backgroundColor: '#ffffff',
+        borderRadius: '16px',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+        border: '1px solid #e5e7eb',
+        fontFamily: 'sans-serif'
+      }}
+    >
+      <h1
+        style={{
+          fontSize: '28px',
+          fontWeight: '800',
+          color: '#1e3a8a',
+          marginBottom: '8px',
+        }}
       >
-        {loading ? 'Analyzing...' : 'Analyze'}
-      </button>
-    </form>
+        Analyze sentiment
+      </h1>
+      <p
+        style={{
+          fontSize: '14px',
+          color: '#2563eb',
+          marginBottom: '24px',
+        }}
+      >
+        Detect the general sentiment expressed in a Movie review by using LLM as NLP classifier.
+      </p>
+
+      <h2
+        style={{
+          fontSize: '22px',
+          fontWeight: '700',
+          color: '#1e40af',
+          marginBottom: '12px',
+        }}
+      >
+        Write review
+      </h2>
+      <form onSubmit={handleSubmit}>
+        <textarea
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          rows={6}
+          placeholder="Write your movie review here..."
+          style={{
+            width: '100%',
+            padding: '16px',
+            fontSize: '14px',
+            borderRadius: '12px',
+            border: '1px solid #d1d5db',
+            backgroundColor: '#f3f4f6',
+            resize: 'none',
+            marginBottom: '16px',
+            color: '#111827',
+          }}
+        />
+        <button
+          type="submit"
+          disabled={!text || loading}
+          style={{
+            width: '100%',
+            padding: '14px',
+            fontWeight: '600',
+            color: 'white',
+            borderRadius: '12px',
+            backgroundColor: !text || loading ? '#93c5fd' : '#2563eb',
+            cursor: !text || loading ? 'not-allowed' : 'pointer',
+            transition: 'background-color 0.3s ease',
+            border: 'none',
+          }}
+        >
+          {loading ? 'Analyzing...' : 'Analyze'}
+        </button>
+      </form>
+    </div>
   );
 };
 
