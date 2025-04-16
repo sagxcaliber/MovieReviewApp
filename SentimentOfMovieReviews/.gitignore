@@ -16,4 +16,3 @@ history.json
 test.py
 *.jsonl
 *.csv
-*.env
