@@ -83,8 +83,8 @@ source dockerCMD.sh
 
 ## Access URLs
 
-- **Frontend (Local)**: [http://3.109.49.169:3000](http://3.109.49.169:3000)  
-- **Backend API (Local)**: [hhttp://3.109.49.169:8000](http://3.109.49.169:8000)  
+- **Frontend (server)**: [http://3.109.49.169:3000](http://3.109.49.169:3000)  
+- **Backend API (server)**: [hhttp://3.109.49.169:8000](http://3.109.49.169:8000)  
 - **Public Test URL**: [http://3.109.49.169:3000](http://3.109.49.169:3000)
 
 ---
